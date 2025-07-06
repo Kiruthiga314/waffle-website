@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiruthiga Waffle Shop - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="waffle.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Crave & Crisp</h1>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hours.html">Hours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="main">
+    <section class="hero">
+      <img src="img/hero-waffle.png" alt="Delicious Waffles" />
+      <h2 class="hero__h2 animate-fade">Welcome to Crave & Crisp Waffle Shop</h2>
+    </section>
+
+    <article class="main__article animate-fade" id="about" style="margin-top: 2rem;">
+      <h2>About Us</h2>
+      <p>
+        At Kiruthiga Waffle Shop, we believe waffles are not just a meal, they are an experience! 
+        Our waffles are freshly made with love and the finest ingredients, guaranteed to satisfy your sweet or savory cravings.
+      </p>
+      <p>
+        From classic maple syrup waffles to our signature chocolate and savory bacon waffles, 
+        we have something delicious for everyone. Come visit us and enjoy a warm, welcoming atmosphere perfect for family and friends.
+      </p>
+    </article>
+
+    <article class="main__article animate-fade" style="margin-top: 2rem;">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Freshly made waffles using quality ingredients.</li>
+        <li>Wide variety of flavors – sweet and savory.</li>
+        <li>Friendly staff and cozy environment.</li>
+        <li>Open 7 days a week with convenient hours.</li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollBtn" title="Go to top">⬆️</button>
+
+  <!-- Dark Mode Toggle -->
+  
+
+  <footer class="footer">
+    <p>Copyright &copy; 2025 Kiruthiga's Crave & Crisp Waffle Shop</p>
+  </footer>
+
+  <script>
+    // Scroll to Top button
+    const scrollBtn = document.getElementById('scrollBtn');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const navToggle = document.getElementById("navToggle");
+    const nav = document.querySelector(".header__nav");
+
+    navToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    
+    
+  </script>
+  
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiruthiga Waffle Shop - Hours</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="waffle.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Crave & Crisp</h1>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hours.html" aria-current="page">Hours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <article class="main__article">
+      <p>We are open 7 days a week</p>
+      <dl>
+        <dt><strong>Monday to Friday:</strong></dt>
+        <dd>&nbsp;&nbsp;8:00 AM - 8:00 PM</dd>
+        <dt><strong>Saturday:</strong></dt>
+        <dd>&nbsp;&nbsp;9:00 AM - 10:00 PM</dd>
+        <dt><strong>Sunday:</strong></dt>
+        <dd>&nbsp;&nbsp;10:00 AM - 6:00 PM</dd>
+      </dl>
+    </article>
+  </main>
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const nav = document.querySelector(".header__nav");
+
+    navToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    });
+  </script>
+
+
+
+  <footer class="footer">
+    <p>&copy; 2025 Kiruthiga's Crave & Crisp Waffle Shop. All rights reserved.</p>
+  </footer>
+  
+
+</body>
+</html>
+

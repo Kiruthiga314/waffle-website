@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiruthiga Waffle Shop - Menu</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="waffle.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Crave & Crisp</h1>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="menu.html" aria-current="page">Our Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hours.html">Hours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2 class="main__title">Our Delicious Waffle Menu</h2>
+
+    <section class="menu-grid">
+      <article class="menu-item animate-fade">
+        <img src="img/classic-waffle.jpg" alt="Classic Waffle" />
+        <h3>Classic Waffle</h3>
+        <p>Golden crispy waffle served with maple syrup and fresh butter.</p>
+        <p class="price">$5.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </article>
+
+      <article class="menu-item animate-fade">
+        <img src="img/fruit-topped-waffle.jpg" alt="Fruit Topped Waffle" />
+        <h3>Fruit Topped Waffle</h3>
+        <p>Waffle topped with fresh seasonal fruits and whipped cream.</p>
+        <p class="price">$7.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </article>
+
+      <article class="menu-item animate-fade">
+        <img src="img/chocolate-waffle.jpg" alt="Chocolate Waffle" />
+        <h3>Chocolate Waffle</h3>
+        <p>Rich chocolate waffle with chocolate drizzle and ice cream.</p>
+        <p class="price">$8.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </article>
+
+      <article class="menu-item animate-fade">
+        <img src="img/savory-waffle.jpg" alt="Savory Waffle" />
+        <h3>Savory Waffle</h3>
+        <p>Waffle topped with crispy bacon, cheese, and a fried egg.</p>
+        <p class="price">$9.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollBtn" title="Go to top">⬆️</button>
+
+  <!-- Dark Mode Toggle -->
+  
+
+  <footer class="footer">
+    <p>Copyright &copy; 2025 Kiruthiga's Crave & Crisp Waffle Shop</p>
+  </footer>
+
+  <script>
+    // Scroll to Top button
+    const scrollBtn = document.getElementById('scrollBtn');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Dark mode toggle
+    
+
+    // Add to Cart button click handler (simple example)
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const itemName = e.target.closest('.menu-item').querySelector('h3').innerText;
+        alert(`${itemName} added to cart!`);
+        // Here you could add code to actually add items to cart or update UI
+      });
+    });
+    const navToggle = document.getElementById("navToggle");
+    const nav = document.querySelector(".header__nav");
+
+    navToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+  </script>
+  
+
+</body>
+</html>
+

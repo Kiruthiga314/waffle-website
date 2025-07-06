@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiruthiga Waffle Shop - Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="waffle.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Crave & Crisp</h1>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="header__nav">
+      <ul class="header__ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="hours.html">Hours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <article id="contact" class="main__article contact">
+      <form>
+        <h2 class="contact__h2">Contact Us</h2>
+        <p>If you have any questions or feedback, please fill out the form below:</p>
+
+        <fieldset class="contact__fieldset">
+          <legend>Contact Information</legend>
+          <p class="contact__p">Please provide your contact details so we can get back to you.</p>
+          <p class="contact__p">
+            <label class="contact__label" for="name">Name:</label>
+            <input class="contact__input" type="text" id="name" name="name" placeholder="Enter your name" required />
+          </p>
+          <p class="contact__p">
+            <label class="contact__label" for="phone">Phone:</label>
+            <input class="contact__input" type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" name="phone" placeholder="Enter your phone number" required />
+          </p>
+          <p class="contact__p">
+            <label class="contact__label" for="email">Email:</label>
+            <input class="contact__input" type="email" id="email" placeholder= "Enter your email" name="email" required />
+          </p>
+          <p class="contact__p">
+            <label class="contact__label" for="message">Message:</label><br />
+            <textarea
+              class="contact__textarea"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Type your message here"
+              required
+            ></textarea>
+          </p>
+          <button class="contact__button" type="submit">Send Message</button>
+        </fieldset>
+      </form>
+    </article>
+
+    <section id="location">
+      <h2>Our Location</h2>
+      <p>We are located at:</p>
+      <address>
+        123 Waffle Street,<br />
+        Waffle City, Anna Nagar-17<br /><br />
+        Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+      </address>
+
+      <p>For directions, please use the map below:</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.768637873085!2d78.14581251433884!3d9.933230392893025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58f5674d63b%3A0x5a5c7fdbf8697da7!2sAnna%20Nagar%2C%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1720300000000"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+  </main>
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const nav = document.querySelector(".header__nav");
+
+    navToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    });
+  </script>
+
+
+
+  <footer class="footer">
+    <p>Copyright &copy; 2025 Kiruthiga's Crave & Crisp Waffle Shop</p>
+  </footer>
+</body>
+</html>
+
